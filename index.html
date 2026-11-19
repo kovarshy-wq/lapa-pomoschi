@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Лапа помощи - собаки приюта ищут дом | Совет Первых, школа №41</title>
+<meta name="description" content="Совет «Движения Первых» школы №41 помогает приюту на Посадской, 3: гуляем с собаками, привозим корм и ищем им дом. Анкеты собак, запись на прогулку и советы для тех, кто только думает о собаке.">
+<meta name="theme-color" content="#f8f0e3">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Лапа помощи - собаки приюта ищут дом">
+<meta property="og:description" content="Знакомьтесь с собаками приюта на Посадской, 3, записывайтесь на прогулку и помогайте выбрать друга.">
+<meta property="og:image" content="hero-1.webp">
+<link rel="canonical" href="https://krows.ru/">
+<meta property="og:url" content="https://krows.ru/">
+<link rel="icon" type="image/png" href="emblem-64.png">
+<link rel="apple-touch-icon" href="emblem-192.png">
+<link rel="preload" href="playfair-cyr.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="manrope-cyr.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="header" id="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="#top" aria-label="Лапа помощи, на главную">
+      <img class="brand__mark" src="emblem.png" alt="Эмблема «Лапа помощи»" width="54" height="54" loading="eager">
+      <span class="brand__text">
+        <span class="brand__title">Лапа помощи</span>
+        <span class="brand__sub">Совет Первых · школа №41</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Главное меню">
+      <a href="#about">О проекте</a>
+      <a href="#dogs">Собаки</a>
+      <a href="#help">Как помочь</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+
+    <a class="btn btn--primary header__cta" href="#dogs">
+      Выбрать друга
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
+    <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
+    <svg class="deco deco--bloom deco--hero-bloom" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="26" r="15"/><circle cx="74" cy="44" r="15"/><circle cx="65" cy="72" r="15"/><circle cx="35" cy="72" r="15"/><circle cx="26" cy="44" r="15"/><circle class="deco__core" cx="50" cy="50" r="12"/></svg>
+    <svg class="leaf leaf--hero" viewBox="0 0 64 64" aria-hidden="true"><path d="M6 58C6 30 24 8 58 6c2 34-16 52-44 52H6Z"/><path class="leaf__vein" d="M8 56C22 42 36 28 56 8"/></svg>
+    <div class="wrap hero__grid">
+      <div>
+        <span class="eyebrow reveal">Приют на Посадской, 3</span>
+        <h1 class="hero__title reveal reveal--d1">У каждой собаки<br>должен быть<br><em>свой человек</em></h1>
+        <p class="hero__text reveal reveal--d2">Мы - совет «Движения Первых» школы №41. Гуляем с собаками приюта, привозим корм и ищем тех, кто заберёт друга домой. Здесь - настоящие анкеты собак, которым очень нужна семья.</p>
+        <div class="hero__actions reveal reveal--d3">
+          <a class="btn btn--clay" href="#dogs">
+            Выбрать друга
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="#help">Как ещё помочь</a>
+        </div>
+        <div class="hero__meta reveal reveal--d3">
+          <div class="hero__meta-item"><span class="hero__meta-num" id="stat-dogs">8</span><span class="hero__meta-label">собак ищут дом</span></div>
+          <div class="hero__meta-item"><span class="hero__meta-num">17</span><span class="hero__meta-label">классов с нами</span></div>
+          <div class="hero__meta-item"><span class="hero__meta-num">100<small> кг</small></span><span class="hero__meta-label">корма собрали</span></div>
+        </div>
+      </div>
+
+      <div class="collage reveal reveal--d2">
+        <div class="collage__main">
+          <img src="hero-1.webp" alt="Волонтёр гладит чёрную собаку во дворе приюта" width="1400" height="1867" fetchpriority="high">
+        </div>
+        <div class="collage__side">
+          <img src="hero-2.webp" alt="Собака смотрит из-за решётки вольера" width="1400" height="788" loading="lazy">
+        </div>
+        <div class="collage__badge"><b>8</b> хвостов ждут прогулку</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <svg class="deco deco--sprig deco--about-sprig" viewBox="0 0 80 120" aria-hidden="true"><path d="M40 116V16"/><ellipse cx="27" cy="40" rx="13" ry="6" transform="rotate(-28 27 40)"/><ellipse cx="53" cy="54" rx="13" ry="6" transform="rotate(28 53 54)"/><ellipse cx="27" cy="70" rx="13" ry="6" transform="rotate(-28 27 70)"/><ellipse cx="53" cy="84" rx="13" ry="6" transform="rotate(28 53 84)"/></svg>
+    <svg class="leaf leaf--about" viewBox="0 0 64 64" aria-hidden="true"><path d="M58 6C58 34 40 56 6 58 4 24 22 6 50 6h8Z"/><path class="leaf__vein" d="M56 8C42 22 28 36 8 56"/></svg>
+    <div class="wrap">
+      <div class="about">
+        <div class="about__media reveal">
+          <img src="about-team.webp" alt="Команда проекта у входа в приют" width="1500" height="1125" loading="lazy">
+        </div>
+        <div class="reveal reveal--d1">
+          <span class="eyebrow">О проекте</span>
+          <h2>Школьный совет, который<br>ходит гулять с собаками</h2>
+          <p class="lead">Мы - совет «Движения Первых» МАОУ СОШ №41. Раз в неделю периодически ездим в приют на Посадской, 3: выгуливаем собак и привозим корм.</p>
+          <p>Приют живёт помощью людей, а собакам не хватает главного - внимания и дома. Поэтому мы собираем анкеты, снимаем видео с прогулок и рассказываем о каждой собаке так, чтобы её заметили.</p>
+          <ul class="about__list">
+            <li><span class="dot" aria-hidden="true"></span><span>Собираем корм, поводки, лежанки и всё, что нужно каждый день</span></li>
+            <li><span class="dot" aria-hidden="true"></span><span>Ищем дом: рассказываем о собаках в школе и в группе ВК</span></li>
+          </ul>
+          <div class="stats">
+            <div class="stat"><span class="stat__num" data-count="100">0</span><span class="stat__label">кг корма собрали</span></div>
+            <div class="stat"><span class="stat__num" data-count="17">0</span><span class="stat__label">классов участвуют</span></div>
+            <div class="stat"><span class="stat__num" data-count="3">0</span><span class="stat__label">прогулки провели</span></div>
+            <div class="stat"><span class="stat__num" data-count="8">0</span><span class="stat__label">собак в анкетах</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="video">
+    <svg class="deco deco--bloom deco--video-bloom" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="26" r="15"/><circle cx="74" cy="44" r="15"/><circle cx="65" cy="72" r="15"/>
+      <circle cx="35" cy="72" r="15"/><circle cx="26" cy="44" r="15"/>
+      <circle class="deco__core" cx="50" cy="50" r="12"/>
+    </svg>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Живая жизнь</span>
+        <h2>Как это выглядит<br>на самом деле</h2>
+        <p>Никаких постановочных кадров - только прогулки, знакомства и хвосты.</p>
+      </div>
+      <div class="gallery" id="gallery"></div>
+    </div>
+  </section>
+
+  <section class="section" id="dogs">
+    <svg class="deco deco--leaf deco--dogs-leaf" viewBox="0 0 64 64" aria-hidden="true"><path d="M58 6C58 34 40 56 6 58 4 24 22 6 50 6h8Z"/></svg>
+    <svg class="leaf leaf--dogs" viewBox="0 0 64 64" aria-hidden="true"><path d="M6 58C6 30 24 8 58 6c2 34-16 52-44 52H6Z"/><path class="leaf__vein" d="M8 56C22 42 36 28 56 8"/></svg>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Наши собаки</span>
+        <h2>Они ищут дом</h2>
+        <p>Каждая карточка - реальная собака из приюта. Можно приехать на прогулку и просто познакомиться, а можно сразу забрать друга домой.</p>
+      </div>
+
+      <div class="filters reveal" role="tablist" aria-label="Фильтр собак">
+        <button class="chip is-active" data-filter="all" role="tab" aria-selected="true">Все <span id="count-all"></span></button>
+        <button class="chip" data-filter="search" role="tab" aria-selected="false">Ищет дом <span id="count-search"></span></button>
+        <button class="chip" data-filter="home" role="tab" aria-selected="false">Нашла семью <span id="count-home"></span></button>
+      </div>
+
+      <div class="dogs" id="dogsGrid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="help">
+    <svg class="deco deco--sprig deco--help-sprig" viewBox="0 0 80 120" aria-hidden="true">
+      <path d="M40 116V16"/><ellipse cx="27" cy="40" rx="13" ry="6" transform="rotate(-28 27 40)"/>
+      <ellipse cx="53" cy="54" rx="13" ry="6" transform="rotate(28 53 54)"/>
+      <ellipse cx="27" cy="70" rx="13" ry="6" transform="rotate(-28 27 70)"/>
+      <ellipse cx="53" cy="84" rx="13" ry="6" transform="rotate(28 53 84)"/>
+    </svg>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Как помочь</span>
+        <h2>Не обязательно забирать собаку, чтобы изменить её жизнь. Выберите то, что вам по силам - и напишите нам.</h2>
+      </div>
+      <div class="help">
+        <article class="help__card reveal">
+          <span class="help__num">01</span>
+          <h3>Приехать на прогулку</h3>
+          <p>С вторника по воскресенье, с 13:00 по 17:00, приют на Посадской, 3. Возьмите удобную обувь и хорошее настроение - поводок и компанию найдём.</p>
+          <button class="btn btn--ghost" data-open-form="walk">Записаться на прогулку</button>
+        </article>
+        <article class="help__card reveal reveal--d1">
+          <span class="help__num">02</span>
+          <h3>Принести корм</h3>
+          <p>Пачку сухого корма можно оставить в 41-й школе на вахте - мы сами отвезём её в приют в ближайшую поездку.</p>
+          <button class="btn btn--ghost" data-open-form="food">Хочу принести корм</button>
+        </article>
+        <article class="help__card reveal reveal--d2">
+          <span class="help__num">03</span>
+          <h3>Поделиться ссылкой</h3>
+          <p>Отправьте ссылку на этот сайт друзьям и в чаты. Иногда самый быстрый путь к дому - одно сообщение близкому человеку.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contacts">
+    <svg class="deco deco--bloom deco--contacts-bloom" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="26" r="15"/><circle cx="74" cy="44" r="15"/><circle cx="65" cy="72" r="15"/><circle cx="35" cy="72" r="15"/><circle cx="26" cy="44" r="15"/><circle class="deco__core" cx="50" cy="50" r="12"/></svg>
+    <svg class="leaf leaf--contacts" viewBox="0 0 64 64" aria-hidden="true"><path d="M58 6C58 34 40 56 6 58 4 24 22 6 50 6h8Z"/><path class="leaf__vein" d="M56 8C42 22 28 36 8 56"/></svg>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Контакты и вопросы</span>
+        <h2>Что-то не поняли -<br>напишите нам</h2>
+      </div>
+      <div class="contacts">
+        <div class="contact-card reveal">
+          <div class="contact-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><b>Приют</b><span>Посадская, 3 - с вторника по воскресенье, с 13:00 по 17:00</span></div>
+          </div>
+          <div class="contact-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 7 9 6 9-6"/></svg>
+            <div><b>Почта</b><span><a href="mailto:Nastusha2416@yandex.ru">Nastusha2416@yandex.ru</a></span></div>
+          </div>
+          <div class="contact-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H7l-3 4V4Z"/></svg>
+            <div><b>Группа ВК</b><span><a href="https://vk.ru/41dobrye_dela" target="_blank" rel="noopener">vk.ru/41dobrye_dela</a> - все новости и фотоотчёты</span></div>
+          </div>
+          <div class="contact-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <div><b>Ответим</b><span>Обычно в течение дня, кроме уроков</span></div>
+          </div>
+        </div>
+
+        <div class="faq reveal reveal--d1">
+          <details open>
+            <summary>Можно ли приехать, если мне меньше 18?</summary>
+            <p>Да. До 14 лет - вместе со взрослым, с 14 до 18 - можно с письменным согласием родителей.</p>
+          </details>
+          <details>
+            <summary>Что взять с собой на прогулку?</summary>
+            <p>Удобную обувь, одежду, которую не жалко испачкать. Поводки и намордники у нас есть.</p>
+          </details>
+          <details>
+            <summary>Я не могу забрать собаку. Чем ещё помочь?</summary>
+            <p>Кормом, амуницией или поделиться ссылкой на сайт. Даже одна прогулка в неделю - это уже большая поддержка.</p>
+          </details>
+          <details>
+            <summary>Как проходит знакомство с собакой?</summary>
+            <p>Сначала прогулка на территории приюта, потом - встреча на нейтральной территории. Домой собака уезжает только после спокойного знакомства и договорённости с куратором.</p>
+          </details>
+          <details>
+            <summary>Собака привита и обработана?</summary>
+            <p>Да, все собаки в анкетах привиты и обработаны, большинство стерилизованы. Точный статус указан в карточке каждой собаки.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <a class="brand" href="#top" aria-label="Лапа помощи, на главную">
+      <img class="brand__mark" src="emblem.png" alt="Эмблема «Лапа помощи»" width="54" height="54" loading="eager">
+      <span class="brand__text">
+        <span class="brand__title">Лапа помощи</span>
+        <span class="brand__sub">Совет Первых · школа №41</span>
+      </span>
+    </a>
+    <small>© <span id="year"></span> Проект совета «Движения Первых» МАОУ СОШ №41.<br>Помогаем приюту на Посадской, 3.</small>
+  </div>
+</footer>
+
+<div class="modal" id="dogModal" aria-hidden="true">
+  <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="dogModalTitle">
+    <button class="modal__close" data-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <div class="sheet" id="dogSheet"></div>
+  </div>
+</div>
+
+<div class="modal" id="formModal" aria-hidden="true">
+  <div class="modal__panel modal__panel--narrow" role="dialog" aria-modal="true" aria-labelledby="formTitle">
+    <button class="modal__close" data-close aria-label="Закрыть">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <form class="form" id="leadForm">
+      <h3 id="formTitle" style="font-size:30px">Записаться на прогулку</h3>
+      <p class="form__hint" id="formSub">Оставьте контакты - мы напишем и договоримся о встрече.</p>
+      <div class="field">
+        <label for="leadName">Как вас зовут</label>
+        <input id="leadName" name="name" type="text" required autocomplete="name" placeholder="Имя и фамилия">
+      </div>
+      <div class="field">
+        <label for="leadContact">Телефон</label>
+        <input id="leadContact" name="contact" type="tel" required autocomplete="tel" placeholder="+7 900 000 00 00">
+      </div>
+      <div class="field">
+        <label for="leadMsg">Комментарий</label>
+        <textarea id="leadMsg" name="message" placeholder="Например: хотим познакомиться с Блэком в эту субботу"></textarea>
+      </div>
+      <button class="btn btn--clay btn--wide" type="submit">Отправить заявку</button>
+      <p class="form__hint">Кнопка откроет Яндекс Почту с готовым письмом на Nastusha2416@yandex.ru - останется только нажать «Отправить». Текст заявки при этом копируется в буфер.</p>
+    </form>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox__close" data-close-lightbox aria-label="Закрыть фото">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+  <img id="lightboxImg" alt="">
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

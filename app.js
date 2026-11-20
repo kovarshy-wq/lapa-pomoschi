@@ -440,12 +440,14 @@ if ("IntersectionObserver" in window) {
       const target = Number(el.dataset.count);
       const dur = 1400;
       const start = performance.now();
+      const decimal = !Number.isInteger(target);
+      const fmt = value => decimal ? value.toFixed(1).replace('.', ',') : String(Math.round(value));
       const step = now => {
         const p = Math.min((now - start) / dur, 1);
         const eased = 1 - Math.pow(1 - p, 3);
-        el.textContent = Math.round(target * eased);
+        el.textContent = fmt(target * eased);
         if (p < 1) requestAnimationFrame(step);
-        else el.textContent = target;
+        else el.textContent = fmt(target);
       };
       requestAnimationFrame(step);
       counterObserver.unobserve(el);
@@ -459,3 +461,29 @@ const initialDog = location.hash.replace("#", "");
 if (initialDog && DOGS.some(d => d.slug === initialDog)) {
   window.addEventListener("load", () => openDog(initialDog));
 }
+
+const copyButtons = document.querySelectorAll('[data-copy]');
+copyButtons.forEach(btn => {
+  btn.addEventListener('click', async () => {
+    const text = btn.dataset.copy;
+    const original = btn.textContent;
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+      } else {
+        const area = document.createElement('textarea');
+        area.value = text;
+        area.style.position = 'fixed';
+        area.style.opacity = '0';
+        document.body.appendChild(area);
+        area.select();
+        document.execCommand('copy');
+        document.body.removeChild(area);
+      }
+      btn.textContent = 'Ссылка скопирована';
+    } catch (e) {
+      btn.textContent = text;
+    }
+    setTimeout(() => { btn.textContent = original; }, 2200);
+  });
+});

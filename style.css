@@ -54,8 +54,7 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   margin: 0;
   background-color: var(--cream);
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='340' height='340'><g fill='%237b7c55' opacity='0.10'><g transform='translate(52 58) rotate(-18) scale(1.05)'><ellipse cx='0' cy='12' rx='15' ry='12'/><circle cx='-16' cy='-10' r='6'/><circle cx='-7' cy='-17' r='6'/><circle cx='5' cy='-17' r='6'/><circle cx='15' cy='-9' r='5.4'/></g><g transform='translate(228 128) rotate(24) scale(0.8)'><ellipse cx='0' cy='12' rx='15' ry='12'/><circle cx='-16' cy='-10' r='6'/><circle cx='-7' cy='-17' r='6'/><circle cx='5' cy='-17' r='6'/><circle cx='15' cy='-9' r='5.4'/></g></g><g fill='%23c98b69' opacity='0.09'><g transform='translate(96 244) rotate(10) scale(1.12)'><ellipse cx='0' cy='12' rx='15' ry='12'/><circle cx='-16' cy='-10' r='6'/><circle cx='-7' cy='-17' r='6'/><circle cx='5' cy='-17' r='6'/><circle cx='15' cy='-9' r='5.4'/></g><g transform='translate(268 272) rotate(-34) scale(0.72)'><ellipse cx='0' cy='12' rx='15' ry='12'/><circle cx='-16' cy='-10' r='6'/><circle cx='-7' cy='-17' r='6'/><circle cx='5' cy='-17' r='6'/><circle cx='15' cy='-9' r='5.4'/></g></g></svg>");
-  background-size: 340px 340px;
+background-image: radial-gradient(900px 620px at 88% -6%, rgba(201, 139, 105, 0.13), rgba(201, 139, 105, 0) 70%), radial-gradient(760px 560px at -8% 34%, rgba(123, 124, 85, 0.09), rgba(123, 124, 85, 0) 72%), radial-gradient(820px 640px at 60% 108%, rgba(201, 139, 105, 0.09), rgba(201, 139, 105, 0) 74%);
   background-attachment: scroll;
   color: var(--ink);
   font-family: var(--sans);
@@ -78,7 +77,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   z-index: 2;
   opacity: 0.35;
   mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
 }
 
 .wrap {

@@ -47,6 +47,22 @@
   --ease: cubic-bezier(0.22, 0.9, 0.24, 1);
 }
 
+body { position: relative; }
+
+body { position: relative; }
+
+body { position: relative; }
+.paw-trail { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.paw-trail i {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  margin: -24px 0 0 -24px;
+  background: url("paw.png") center / contain no-repeat;
+  transform: rotate(var(--r)) scale(var(--s));
+  opacity: var(--o);
+}
+
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; overflow-x: hidden; }
@@ -220,20 +236,7 @@ p.lead { font-size: clamp(17px, 1.4vw, 20px); color: var(--ink); }
 .hero__blob--2 { width: 420px; height: 420px; background: #d9a883; left: -140px; bottom: -140px; opacity: 0.34; }
 .hero__blob--3 { width: 300px; height: 300px; background: #a9ab84; top: 46%; right: 26%; opacity: 0.3; }
 .hero__trail, .hero__trail i, .hero__trail, .hero__trail i, .hero__trail, .hero__trail i, .hero__trail, .hero__trail i, .hero__trail, .hero__trail i, .hero__trail, .hero__trail i, #dogs { position: relative; }
-.hero__trail, .dogs-trail { position: absolute; pointer-events: none; z-index: 0; }
-.hero__trail { inset: 0; }
-.dogs-trail { top: 0; right: 0; width: 100%; height: 480px; }
-.hero__trail i, .dogs-trail i {
-  position: absolute;
-  width: 96px;
-  height: 96px;
-  margin: -48px 0 0 -48px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-70 -80 140 140'%3E%3Cg fill='%238a7a58'%3E%3Cpath d='M-37,0 C-37,-22 -21,-34 0,-34 C21,-34 37,-22 37,0 C37,14 33,22 26,23 C20,24 19,17 13,16 C7,15 6,21 0,21 C-6,21 -7,15 -13,16 C-19,17 -20,24 -26,23 C-33,22 -37,14 -37,0 Z'/%3E%3Cellipse cx='-40' cy='-54' rx='10' ry='14' transform='rotate(-40 -40 -54)'/%3E%3Cellipse cx='-14' cy='-62' rx='10' ry='14' transform='rotate(-13 -14 -62)'/%3E%3Cellipse cx='14' cy='-62' rx='10' ry='14' transform='rotate(13 14 -62)'/%3E%3Cellipse cx='40' cy='-54' rx='10' ry='14' transform='rotate(40 40 -54)'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
-  transform: rotate(var(--r)) scale(var(--s));
-  opacity: var(--o);
-}
-.dogs-trail i { width: 124px; height: 124px; margin: -62px 0 0 -62px; }
-.hero__grid {
+.hero__trail, .hero__trail i, .hero__grid {
   position: relative;
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
@@ -726,7 +729,16 @@ html.js .reveal.is-in { opacity: 1; transform: none; }
   }
 
 @media (max-width: 1320px) {
-  .hero__trail { display: none; }
+  }
+
+@media (max-width: 1320px) {
+  }
+
+@media (max-width: 1320px) {
+  }
+
+@media (max-width: 1320px) {
+  .paw-trail { display: none; }
 }
 
 @media (max-width: 1080px) {

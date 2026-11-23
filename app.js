@@ -268,7 +268,7 @@ const icons = {
 };
 
 document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("stat-dogs").textContent = DOGS.length;
+document.getElementById("stat-dogs").dataset.count = DOGS.length;
 
 const grid = document.getElementById("dogsGrid");
 const filterCounts = { all: DOGS.length, search: 0, home: 0 };

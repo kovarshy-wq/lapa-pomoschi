@@ -247,7 +247,6 @@ p.lead { font-size: clamp(17px, 1.4vw, 20px); color: var(--ink); }
 }
 .hero__blob--1 { width: 520px; height: 520px; background: #eccdb1; top: -120px; right: -80px; }
 
-.hero__blob--2 { width: 420px; height: 420px; background: #d9a883; left: -140px; bottom: -140px; opacity: 0.34; }
 .hero__blob--3 { width: 300px; height: 300px; background: #a9ab84; top: 46%; right: 26%; opacity: 0.3; }
 .hero__trail, .hero__trail i, .hero__trail, .hero__trail i, .hero__trail, .hero__trail i, .hero__trail, .hero__trail i, .hero__trail, .hero__trail i, .hero__trail, .hero__trail i, #dogs { position: relative; }
 .hero__trail, .hero__trail i, .hero__grid {

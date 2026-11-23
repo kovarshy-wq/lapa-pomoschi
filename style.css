@@ -1,27 +1,27 @@
 ﻿@font-face {
   font-family: "Playfair";
-  src: url("playfair-cyr.woff2") format("woff2");
+  src: url("../fonts/playfair-cyr.woff2") format("woff2");
   font-weight: 400 900;
   font-display: swap;
   unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 @font-face {
   font-family: "Playfair";
-  src: url("playfair-lat.woff2") format("woff2");
+  src: url("../fonts/playfair-lat.woff2") format("woff2");
   font-weight: 400 900;
   font-display: swap;
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
   font-family: "Manrope";
-  src: url("manrope-cyr.woff2") format("woff2");
+  src: url("../fonts/manrope-cyr.woff2") format("woff2");
   font-weight: 200 800;
   font-display: swap;
   unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 @font-face {
   font-family: "Manrope";
-  src: url("manrope-lat.woff2") format("woff2");
+  src: url("../fonts/manrope-lat.woff2") format("woff2");
   font-weight: 200 800;
   font-display: swap;
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
@@ -294,7 +294,7 @@ p.lead { font-size: clamp(17px, 1.4vw, 20px); color: var(--ink); }
 .about__list li { display: flex; gap: 14px; align-items: baseline; color: var(--ink-soft); }
 .dot { flex: none; width: 7px; height: 7px; border-radius: 50%; background: var(--clay); margin-top: 9px; }
 
-.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: clamp(40px, 5vw, 72px); }
+.stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: clamp(40px, 5vw, 72px); }
 .stat {
   background: var(--paper);
   border: 1px solid var(--line);
@@ -674,7 +674,7 @@ html.js .reveal.is-in { opacity: 1; transform: none; }
 
 @media (max-width: 1080px) {
   .dogs, .help, .video-grid { grid-template-columns: repeat(2, 1fr); }
-  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stats { grid-template-columns: repeat(3, 1fr); }
   .about { grid-template-columns: 1fr; }
   .about__media { max-width: 520px; }
   .fair { grid-template-columns: 1fr; }
@@ -773,7 +773,6 @@ html.js .reveal.is-in { opacity: 1; transform: none; }
 .deco--contacts-bloom { width: 104px; height: 104px; left: 2%; top: 54px; opacity: 0.4; animation-delay: -5s; }
 
 @media (max-width: 900px) {
-  .deco--hero-bloom { width: 78px; height: 78px; left: 4px; bottom: 60px; }
   .deco--hero-leaf { width: 64px; height: 64px; top: 90px; }
   .deco--about-sprig, .deco--help-sprig { display: none; }
   .deco--video-bloom, .deco--contacts-bloom { width: 64px; height: 64px; }
@@ -784,4 +783,42 @@ html.js .reveal.is-in { opacity: 1; transform: none; }
   *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
   .reveal { opacity: 1; transform: none; }
   html { scroll-behavior: auto; }
+}
+
+
+.leaf-img {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  filter: saturate(0.9);
+}
+.leaf-img--hero { width: 300px; right: -30px; bottom: 30px; transform: rotate(12deg); }
+.leaf-img--about { width: 170px; right: 2%; top: 34px; transform: rotate(-24deg); opacity: 0.42; }
+.leaf-img--dogs { width: 260px; left: -46px; top: 22%; transform: rotate(-8deg); opacity: 0.4; }
+.leaf-img--contacts { width: 220px; right: -34px; bottom: 8%; transform: rotate(18deg); opacity: 0.38; }
+
+.stat__hint { font-size: 12px; line-height: 1.35; color: var(--ink-soft); opacity: 0.85; }
+
+.feedback {
+  margin: 42px auto 0;
+  max-width: 760px;
+  text-align: center;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  opacity: 0.9;
+}
+.feedback a { color: var(--clay-deep); text-decoration: underline; text-underline-offset: 3px; }
+
+@media (max-width: 900px) {
+  .leaf-img--hero { width: 190px; right: -40px; bottom: 10px; }
+  .leaf-img--about { width: 110px; }
+  .leaf-img--dogs { width: 150px; left: -40px; }
+  .leaf-img--contacts { width: 140px; }
+}
+@media (max-width: 620px) {
+  .leaf-img--about, .leaf-img--dogs, .leaf-img--contacts { display: none; }
+  .leaf-img--hero { width: 150px; opacity: 0.35; }
 }
